@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { menu } from "@/data/menu";
+import { menu, type MenuCategory } from "@/data/menu";
 import { cn } from "@/lib/utils";
 
 /** Tabbed, data-driven menu browser. Categories come from src/data/menu.ts. */
 export function MenuExplorer() {
-  const [active, setActive] = useState(menu[0].id);
-  const category = menu.find((c) => c.id === active) ?? menu[0];
+  const first = menu[0] as MenuCategory;
+  const [active, setActive] = useState(first.id);
+  const category: MenuCategory = menu.find((c) => c.id === active) ?? first;
 
   return (
     <div>
