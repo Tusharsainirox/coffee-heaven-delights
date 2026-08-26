@@ -77,19 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Coffee Heaven — Cozy Café in Rewari, Haryana" },
+      { title: "Coffee Heaven | Cafe & Coffee Shop in Rewari" },
       {
         name: "description",
         content:
-          "Coffee Heaven is a cozy café near Gandhi Chowk, Model Town, Rewari serving specialty hot and cold coffees, cheesecakes, pastries and Biscoff cakes. Open daily 11 AM – 10 PM.",
+          "Coffee Heaven, Rewari — handcrafted coffee, cold coffee, shakes, pasta, sandwiches, burgers and more. Visit us at Gandhi Chowk, Model Town.",
       },
       { name: "author", content: "Coffee Heaven" },
-      { property: "og:title", content: "Coffee Heaven — Cozy Café in Rewari, Haryana" },
-      {
-        property: "og:description",
-        content:
-          "From a humble coffee cart to Rewari's beloved sit-down café. Specialty brews, cheesecakes and cakes near Gandhi Chowk, Model Town. Open daily 11 AM – 10 PM.",
-      },
+      { property: "og:site_name", content: "Coffee Heaven" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
