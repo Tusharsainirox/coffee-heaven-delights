@@ -487,7 +487,7 @@ function CoffeeHeaven() {
               rel="noreferrer"
               className="mt-3 block hover:text-cream"
             >
-              Instagram: @coffeeheaven_
+              Instagram: @coffeeheaven__
             </a>
           </div>
           <nav className="flex flex-col gap-2 text-sm text-cream/70">
