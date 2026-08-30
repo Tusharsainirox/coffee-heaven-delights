@@ -11,6 +11,9 @@ import pestoSandwich from "@/assets/pesto-sandwich.jpg";
 import strawberryShake from "@/assets/strawberry-shake.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
 import interiorAsset from "@/assets/cafe-interior.png.asset.json";
+import burgerAsset from "@/assets/afgani-paneer-burger.png.asset.json";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const MAPS_URL = "https://share.google/CrYg6VvSMjuj30BJH";
 const INSTAGRAM_URL = "https://www.instagram.com/coffeeheaven__/";
