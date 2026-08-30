@@ -138,13 +138,31 @@ const reviewThemes = [
   { title: "Great for meet-ups & laptops", note: "Casual catch-ups or a work session." },
 ];
 
+const navLinks = [
+  { href: "#menu", label: "Menu" },
+  { href: "#story", label: "About" },
+  { href: "#reviews", label: "Reviews" },
+  { href: "#visit", label: "Location" },
+];
+
 function CoffeeHeaven() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       {/* Navigation — sticky */}
       <div className="sticky top-0 z-50 border-b border-espresso/10 bg-cream/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:px-8">
-          <a href="#top" className="flex items-center gap-3">
+        <nav className="mx-auto grid max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-6 py-3 md:flex md:justify-between md:px-8">
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-espresso/20 transition-colors hover:bg-espresso/5 md:hidden"
+          >
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+          <a href="#top" className="flex items-center justify-center md:justify-start">
             <img
               src={logoAsset.url}
               alt="Coffee Heaven logo"
@@ -154,26 +172,35 @@ function CoffeeHeaven() {
             />
           </a>
           <div className="hidden gap-8 text-sm font-medium uppercase tracking-widest md:flex">
-            <a href="#menu" className="transition-colors hover:text-clay">
-              Menu
-            </a>
-            <a href="#story" className="transition-colors hover:text-clay">
-              About
-            </a>
-            <a href="#reviews" className="transition-colors hover:text-clay">
-              Reviews
-            </a>
-            <a href="#visit" className="transition-colors hover:text-clay">
-              Location
-            </a>
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="transition-colors hover:text-clay">
+                {link.label}
+              </a>
+            ))}
           </div>
           <a
             href={PHONE_HREF}
-            className="rounded-full border border-espresso/20 px-4 py-2 text-xs font-medium transition-colors hover:bg-espresso/5 sm:px-5 sm:text-sm"
+            className="justify-self-end rounded-full border border-espresso/20 px-4 py-2 text-xs font-medium transition-colors hover:bg-espresso/5 sm:px-5 sm:text-sm"
           >
             Call Now
           </a>
         </nav>
+        {menuOpen && (
+          <div className="border-t border-espresso/10 md:hidden">
+            <div className="mx-auto flex max-w-7xl flex-col px-6 py-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="border-b border-espresso/5 py-3 text-sm font-medium uppercase tracking-widest transition-colors last:border-0 hover:text-clay"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Hero */}
