@@ -138,32 +138,40 @@ const reviewThemes = [
 function CoffeeHeaven() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
-      {/* Navigation */}
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-8">
-        <a href="#top" className="font-serif text-2xl font-semibold tracking-tight">
-          Coffee Heaven
-        </a>
-        <div className="hidden gap-8 text-sm font-medium uppercase tracking-widest md:flex">
-          <a href="#menu" className="transition-colors hover:text-clay">
-            Menu
+      {/* Navigation — sticky */}
+      <div className="sticky top-0 z-50 border-b border-espresso/10 bg-cream/85 backdrop-blur-md">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:px-8">
+          <a href="#top" className="flex items-center gap-3">
+            <img
+              src={logoAsset.url}
+              alt="Coffee Heaven logo"
+              width={160}
+              height={160}
+              className="h-10 w-auto md:h-12"
+            />
           </a>
-          <a href="#story" className="transition-colors hover:text-clay">
-            About
+          <div className="hidden gap-8 text-sm font-medium uppercase tracking-widest md:flex">
+            <a href="#menu" className="transition-colors hover:text-clay">
+              Menu
+            </a>
+            <a href="#story" className="transition-colors hover:text-clay">
+              About
+            </a>
+            <a href="#reviews" className="transition-colors hover:text-clay">
+              Reviews
+            </a>
+            <a href="#visit" className="transition-colors hover:text-clay">
+              Location
+            </a>
+          </div>
+          <a
+            href={PHONE_HREF}
+            className="rounded-full border border-espresso/20 px-4 py-2 text-xs font-medium transition-colors hover:bg-espresso/5 sm:px-5 sm:text-sm"
+          >
+            Call Now
           </a>
-          <a href="#reviews" className="transition-colors hover:text-clay">
-            Reviews
-          </a>
-          <a href="#visit" className="transition-colors hover:text-clay">
-            Location
-          </a>
-        </div>
-        <a
-          href={PHONE_HREF}
-          className="rounded-full border border-espresso/20 px-4 py-2 text-xs font-medium transition-colors hover:bg-espresso/5 sm:px-5 sm:text-sm"
-        >
-          Call Now
-        </a>
-      </nav>
+        </nav>
+      </div>
 
       {/* Hero */}
       <header id="top" className="relative mx-auto max-w-7xl px-6 py-12 md:py-24">
@@ -294,12 +302,12 @@ function CoffeeHeaven() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:gap-20">
           <Reveal>
             <img
-              src={storefront}
-              alt="Coffee Heaven café in Model Town, Rewari, glowing warmly in the evening"
-              width={1000}
-              height={600}
+              src={interiorAsset.url}
+              alt="Inside Coffee Heaven — the espresso bar, pastry display and café seating in Model Town, Rewari"
+              width={1080}
+              height={858}
               loading="lazy"
-              className="aspect-video w-full rounded-2xl object-cover"
+              className="aspect-[4/3] w-full rounded-2xl object-cover"
             />
           </Reveal>
           <Reveal delay={150}>
@@ -414,7 +422,7 @@ function CoffeeHeaven() {
                   rel="noreferrer"
                   className="border-b border-espresso text-lg"
                 >
-                  @coffeeheaven_
+                  @coffeeheaven__
                 </a>
               </div>
             </div>
