@@ -124,8 +124,8 @@ const featured = [
     name: "Loaded Afgani Paneer Burger",
     price: "₹130",
     description: "Creamy afgani paneer stacked in a toasted bun.",
-    image: heroPour,
-    alt: "Coffee Heaven counter with drinks and food being prepared",
+    image: burgerAsset.url,
+    alt: "Loaded Afgani paneer burger with melted cheese, lettuce and creamy afgani sauce in a sesame bun",
   },
 ];
 
