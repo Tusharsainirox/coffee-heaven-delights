@@ -7,12 +7,12 @@
 /*
  * Coffee Heaven design system — "Artisanal Warmth"
  * Espresso browns, warm cream, latte and clay tones.
- * Fonts: Fraunces (serif display), Plus Jakarta Sans (body).
+ * Fonts: Lora (serif display), Nunito Sans (body).
  */
 
 @theme inline {
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
