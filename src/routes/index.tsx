@@ -9,10 +9,11 @@ import cheesecakeCoffee from "@/assets/biscoff-cake.jpg";
 import trufflePasta from "@/assets/truffle-pasta.jpg";
 import pestoSandwich from "@/assets/pesto-sandwich.jpg";
 import strawberryShake from "@/assets/strawberry-shake.jpg";
-import storefront from "@/assets/storefront.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
+import interiorAsset from "@/assets/cafe-interior.png.asset.json";
 
 const MAPS_URL = "https://share.google/CrYg6VvSMjuj30BJH";
-const INSTAGRAM_URL = "https://www.instagram.com/coffeeheaven_/";
+const INSTAGRAM_URL = "https://www.instagram.com/coffeeheaven__/";
 const PHONE = "+91 96719 96606";
 const PHONE_HREF = "tel:+919671996606";
 
