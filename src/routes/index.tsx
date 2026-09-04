@@ -4,8 +4,6 @@ import { MenuExplorer } from "@/components/menu-explorer";
 import heroPour from "@/assets/hero-pour.jpg";
 import biscoffFrappe from "@/assets/biscoff-frappe.jpg";
 import spanishLatte from "@/assets/cappuccino.jpg";
-import chocoChipMocha from "@/assets/oreo-frappe.jpg";
-import cheesecakeCoffee from "@/assets/biscoff-cake.jpg";
 import trufflePasta from "@/assets/truffle-pasta.jpg";
 import pestoSandwich from "@/assets/pesto-sandwich.jpg";
 import strawberryShake from "@/assets/strawberry-shake.jpg";
@@ -138,7 +136,7 @@ function CoffeeHeaven() {
     <div className="min-h-screen bg-background font-sans text-foreground">
       {/* Navigation — sticky */}
       <div className="sticky top-0 z-50 border-b border-espresso/10 bg-cream/85 backdrop-blur-md">
-        <nav className="mx-auto grid max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-6 py-3 md:flex md:justify-between md:px-8">
+        <nav className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-6 py-3 md:flex md:justify-between md:px-8">
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
