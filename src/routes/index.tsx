@@ -9,7 +9,7 @@ import pestoSandwich from "@/assets/pesto-sandwich.jpg";
 import strawberryShake from "@/assets/strawberry-shake.jpg";
 import chocoChipMocha from "@/assets/choco-chip-mocha.jpg";
 import cheesecakeCoffee from "@/assets/cheesecake-coffee.jpg";
-import logoImg from "@/assets/logo.jpg";
+import logoImg from "@/assets/logo.png";
 import interiorImg from "@/assets/cafe-interior.jpg";
 import burgerImg from "@/assets/afgani-paneer-burger.jpg";
 import { useState } from "react";
