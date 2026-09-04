@@ -287,7 +287,7 @@ function CoffeeHeaven() {
               <Reveal
                 key={item.name}
                 delay={(i % 4) * 100}
-                className={i >= 4 ? "hidden lg:block" : undefined}
+                className={i >= 4 ? "hidden lg:block" : ""}
               >
                 <div className="group">
                   <img
