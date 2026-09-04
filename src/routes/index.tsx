@@ -86,6 +86,20 @@ const featured = [
     alt: "Latte with delicate latte art in a ceramic cup",
   },
   {
+    name: "Choco Chip Mocha",
+    price: "₹160 / ₹220",
+    description: "Mocha cold coffee loaded with chocolate chips and cream.",
+    image: chocoChipMocha,
+    alt: "Choco chip mocha cold coffee topped with whipped cream and chocolate chips",
+  },
+  {
+    name: "Cheesecake Coffee",
+    price: "₹140 / ₹180",
+    description: "Creamy cheesecake blended with cold coffee and biscuit crumble.",
+    image: cheesecakeCoffee,
+    alt: "Cheesecake cold coffee with whipped cream and biscuit crumble",
+  },
+  {
     name: "Truffle Pasta",
     price: "₹150",
     description: "Creamy truffle sauce, cooked fresh to order.",
