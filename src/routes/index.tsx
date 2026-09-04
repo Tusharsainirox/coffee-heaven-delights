@@ -4,14 +4,12 @@ import { MenuExplorer } from "@/components/menu-explorer";
 import heroPour from "@/assets/hero-pour.jpg";
 import biscoffFrappe from "@/assets/biscoff-frappe.jpg";
 import spanishLatte from "@/assets/cappuccino.jpg";
-import chocoChipMocha from "@/assets/oreo-frappe.jpg";
-import cheesecakeCoffee from "@/assets/biscoff-cake.jpg";
 import trufflePasta from "@/assets/truffle-pasta.jpg";
 import pestoSandwich from "@/assets/pesto-sandwich.jpg";
 import strawberryShake from "@/assets/strawberry-shake.jpg";
-import logoAsset from "@/assets/logo.png.asset.json";
-import interiorAsset from "@/assets/cafe-interior.png.asset.json";
-import burgerAsset from "@/assets/afgani-paneer-burger.png.asset.json";
+import logoImg from "@/assets/logo.jpg";
+import interiorImg from "@/assets/cafe-interior.jpg";
+import burgerImg from "@/assets/afgani-paneer-burger.jpg";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -86,20 +84,6 @@ const featured = [
     alt: "Latte with delicate latte art in a ceramic cup",
   },
   {
-    name: "Choco Chip Mocha",
-    price: "₹160 / ₹220",
-    description: "Chocolate chips blended through a chilled mocha.",
-    image: chocoChipMocha,
-    alt: "Blended chocolate mocha coffee topped with cream and chocolate",
-  },
-  {
-    name: "Cheesecake Coffee",
-    price: "₹140 / ₹180",
-    description: "Dessert and cold coffee in a single tall glass.",
-    image: cheesecakeCoffee,
-    alt: "Cheesecake flavoured cold coffee dessert on a ceramic plate",
-  },
-  {
     name: "Truffle Pasta",
     price: "₹150",
     description: "Creamy truffle sauce, cooked fresh to order.",
@@ -124,7 +108,7 @@ const featured = [
     name: "Loaded Afgani Paneer Burger",
     price: "₹130",
     description: "Creamy afgani paneer stacked in a toasted bun.",
-    image: burgerAsset.url,
+    image: burgerImg,
     alt: "Loaded Afgani paneer burger with melted cheese, lettuce and creamy afgani sauce in a sesame bun",
   },
 ];
@@ -152,7 +136,7 @@ function CoffeeHeaven() {
     <div className="min-h-screen bg-background font-sans text-foreground">
       {/* Navigation — sticky */}
       <div className="sticky top-0 z-50 border-b border-espresso/10 bg-cream/85 backdrop-blur-md">
-        <nav className="mx-auto grid max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-6 py-3 md:flex md:justify-between md:px-8">
+        <nav className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-6 py-3 md:flex md:justify-between md:px-8">
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -164,7 +148,7 @@ function CoffeeHeaven() {
           </button>
           <a href="#top" className="flex items-center justify-center md:justify-start">
             <img
-              src={logoAsset.url}
+              src={logoImg}
               alt="Coffee Heaven logo"
               width={160}
               height={160}
@@ -332,7 +316,7 @@ function CoffeeHeaven() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:gap-20">
           <Reveal>
             <img
-              src={interiorAsset.url}
+              src={interiorImg}
               alt="Inside Coffee Heaven — the espresso bar, pastry display and café seating in Model Town, Rewari"
               width={1080}
               height={858}
