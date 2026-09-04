@@ -9,9 +9,9 @@ import cheesecakeCoffee from "@/assets/biscoff-cake.jpg";
 import trufflePasta from "@/assets/truffle-pasta.jpg";
 import pestoSandwich from "@/assets/pesto-sandwich.jpg";
 import strawberryShake from "@/assets/strawberry-shake.jpg";
-import logoAsset from "@/assets/logo.png.asset.json";
-import interiorAsset from "@/assets/cafe-interior.png.asset.json";
-import burgerAsset from "@/assets/afgani-paneer-burger.png.asset.json";
+import logoImg from "@/assets/logo.jpg";
+import interiorImg from "@/assets/cafe-interior.jpg";
+import burgerImg from "@/assets/afgani-paneer-burger.jpg";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -84,20 +84,6 @@ const featured = [
     description: "Espresso, sweetened milk and ice — smooth and mellow.",
     image: spanishLatte,
     alt: "Latte with delicate latte art in a ceramic cup",
-  },
-  {
-    name: "Choco Chip Mocha",
-    price: "₹160 / ₹220",
-    description: "Chocolate chips blended through a chilled mocha.",
-    image: chocoChipMocha,
-    alt: "Blended chocolate mocha coffee topped with cream and chocolate",
-  },
-  {
-    name: "Cheesecake Coffee",
-    price: "₹140 / ₹180",
-    description: "Dessert and cold coffee in a single tall glass.",
-    image: cheesecakeCoffee,
-    alt: "Cheesecake flavoured cold coffee dessert on a ceramic plate",
   },
   {
     name: "Truffle Pasta",
