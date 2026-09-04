@@ -110,7 +110,7 @@ const featured = [
     name: "Loaded Afgani Paneer Burger",
     price: "₹130",
     description: "Creamy afgani paneer stacked in a toasted bun.",
-    image: burgerAsset.url,
+    image: burgerImg,
     alt: "Loaded Afgani paneer burger with melted cheese, lettuce and creamy afgani sauce in a sesame bun",
   },
 ];
@@ -150,7 +150,7 @@ function CoffeeHeaven() {
           </button>
           <a href="#top" className="flex items-center justify-center md:justify-start">
             <img
-              src={logoAsset.url}
+              src={logoImg}
               alt="Coffee Heaven logo"
               width={160}
               height={160}
@@ -318,7 +318,7 @@ function CoffeeHeaven() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:gap-20">
           <Reveal>
             <img
-              src={interiorAsset.url}
+              src={interiorImg}
               alt="Inside Coffee Heaven — the espresso bar, pastry display and café seating in Model Town, Rewari"
               width={1080}
               height={858}
