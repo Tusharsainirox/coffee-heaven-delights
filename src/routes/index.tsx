@@ -7,6 +7,8 @@ import spanishLatte from "@/assets/cappuccino.jpg";
 import trufflePasta from "@/assets/truffle-pasta.jpg";
 import pestoSandwich from "@/assets/pesto-sandwich.jpg";
 import strawberryShake from "@/assets/strawberry-shake.jpg";
+import chocoChipMocha from "@/assets/choco-chip-mocha.jpg";
+import cheesecakeCoffee from "@/assets/cheesecake-coffee.jpg";
 import logoImg from "@/assets/logo.jpg";
 import interiorImg from "@/assets/cafe-interior.jpg";
 import burgerImg from "@/assets/afgani-paneer-burger.jpg";
@@ -82,6 +84,20 @@ const featured = [
     description: "Espresso, sweetened milk and ice — smooth and mellow.",
     image: spanishLatte,
     alt: "Latte with delicate latte art in a ceramic cup",
+  },
+  {
+    name: "Choco Chip Mocha",
+    price: "₹160 / ₹220",
+    description: "Mocha cold coffee loaded with chocolate chips and cream.",
+    image: chocoChipMocha,
+    alt: "Choco chip mocha cold coffee topped with whipped cream and chocolate chips",
+  },
+  {
+    name: "Cheesecake Coffee",
+    price: "₹140 / ₹180",
+    description: "Creamy cheesecake blended with cold coffee and biscuit crumble.",
+    image: cheesecakeCoffee,
+    alt: "Cheesecake cold coffee with whipped cream and biscuit crumble",
   },
   {
     name: "Truffle Pasta",
@@ -246,15 +262,17 @@ function CoffeeHeaven() {
       </header>
 
       {/* Featured */}
-      <section className="bg-espresso py-24 text-cream">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-espresso py-16 text-cream lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
-            <div className="mb-16 flex items-end justify-between">
+            <div className="mb-10 flex items-end justify-between lg:mb-16">
               <div>
-                <h2 className="mb-4 font-serif text-4xl">A few favourites</h2>
-                <p className="text-cream/60">Some of the things worth ordering first.</p>
+                <h2 className="mb-3 font-serif text-3xl lg:mb-4 lg:text-4xl">A few favourites</h2>
+                <p className="text-sm text-cream/60 sm:text-base">
+                  Some of the things worth ordering first.
+                </p>
               </div>
-              <div className="mx-12 hidden h-[1px] flex-grow bg-cream/10 md:block" />
+              <div className="mx-6 hidden h-[1px] flex-grow bg-cream/10 md:mx-12 md:block" />
               <a
                 href="#menu"
                 className="shrink-0 text-sm underline decoration-latte underline-offset-4"
@@ -264,9 +282,13 @@ function CoffeeHeaven() {
             </div>
           </Reveal>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
             {featured.map((item, i) => (
-              <Reveal key={item.name} delay={(i % 4) * 100}>
+              <Reveal
+                key={item.name}
+                delay={(i % 4) * 100}
+                className={i >= 4 ? "hidden lg:block" : ""}
+              >
                 <div className="group">
                   <img
                     src={item.image}
@@ -274,13 +296,19 @@ function CoffeeHeaven() {
                     width={1024}
                     height={1024}
                     loading="lazy"
-                    className="mb-5 aspect-square w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="mb-3 aspect-square w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.02] sm:mb-5"
                   />
-                  <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="font-serif text-xl">{item.name}</h3>
-                    <p className="shrink-0 text-sm text-latte tabular-nums">{item.price}</p>
+                  <div className="flex items-baseline justify-between gap-2 sm:gap-3">
+                    <h3 className="truncate font-serif text-base sm:text-lg lg:text-xl">
+                      {item.name}
+                    </h3>
+                    <p className="shrink-0 text-xs text-latte tabular-nums sm:text-sm">
+                      {item.price}
+                    </p>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-cream/60">{item.description}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-cream/60 sm:mt-2 sm:text-sm">
+                    {item.description}
+                  </p>
                 </div>
               </Reveal>
             ))}
