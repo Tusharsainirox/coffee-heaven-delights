@@ -75,49 +75,41 @@ export const Route = createFileRoute("/")({
 const featured = [
   {
     name: "Blueberry Cheesecake",
-    price: undefined,
     image: blueberryCheesecake,
     alt: "Slice of blueberry cheesecake served at Coffee Heaven",
   },
   {
     name: "Classic Veg Toast",
-    price: undefined,
     image: classicVegToast,
     alt: "Classic vegetable toast topped with cucumber, tomato and paneer",
   },
   {
     name: "Croissant Avocado Sandwich",
-    price: undefined,
     image: croissantAvocadoSandwich,
     alt: "Avocado sandwich served in a flaky croissant",
   },
   {
     name: "Frappe",
-    price: "₹120 / ₹150",
     image: frappe,
     alt: "Two chilled Coffee Heaven frappes in takeaway cups",
   },
   {
     name: "Pesto Basil Pasta",
-    price: undefined,
     image: pestoBasilPasta,
     alt: "Creamy pesto basil penne pasta with cherry tomatoes and toast",
   },
   {
     name: "Pain au Chocolat",
-    price: undefined,
     image: painAuChocolat,
     alt: "Pain au chocolat served with two cold drinks at Coffee Heaven",
   },
   {
     name: "Hot Latte",
-    price: "₹90 / ₹140",
     image: hotLatte,
     alt: "Hot latte with leaf-shaped latte art",
   },
   {
     name: "Mix Sauce Pasta",
-    price: "₹150",
     image: mixSaucePasta,
     alt: "Mix sauce penne pasta with vegetables and toasted bread",
   },
@@ -204,7 +196,11 @@ function CoffeeHeaven() {
             <span className="mb-4 inline-block text-xs font-medium uppercase tracking-wider text-clay">
               Cafe in Rewari · Model Town
             </span>
-            <div className="mb-6 flex items-center gap-4 sm:gap-6">
+            <div className="mb-6 flex items-center justify-between gap-4 sm:gap-6">
+              <h1 className="font-serif text-5xl leading-[0.9] font-light sm:text-6xl md:text-7xl">
+                Coffee <br />
+                <span className="italic">Heaven</span>
+              </h1>
               <img
                 src={logoImg}
                 alt="Coffee Heaven emblem"
@@ -212,10 +208,6 @@ function CoffeeHeaven() {
                 height={320}
                 className="h-24 w-24 shrink-0 object-contain sm:h-28 sm:w-28 md:h-36 md:w-36"
               />
-              <h1 className="font-serif text-5xl leading-[0.9] font-light sm:text-6xl md:text-7xl">
-                Coffee <br />
-                <span className="italic">Heaven</span>
-              </h1>
             </div>
             <p className="mb-4 max-w-md font-serif text-xl italic text-espresso/80">
               Your cozy corner for coffee, conversations &amp; good food.
@@ -301,16 +293,9 @@ function CoffeeHeaven() {
                     loading="lazy"
                     className="mb-3 aspect-square w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.02] sm:mb-5"
                   />
-                  <div className="flex items-start justify-between gap-2 sm:gap-3">
-                    <h3 className="font-serif text-base leading-tight sm:text-lg lg:text-xl">
-                      {item.name}
-                    </h3>
-                    {item.price && (
-                      <p className="shrink-0 text-xs text-latte tabular-nums sm:text-sm">
-                        {item.price}
-                      </p>
-                    )}
-                  </div>
+                  <h3 className="font-serif text-base leading-tight sm:text-lg lg:text-xl">
+                    {item.name}
+                  </h3>
                 </div>
               </Reveal>
             ))}
