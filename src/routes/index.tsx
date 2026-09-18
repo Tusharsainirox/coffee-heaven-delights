@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/reveal";
 import { MenuExplorer } from "@/components/menu-explorer";
-import heroPour from "@/assets/hero-pour.jpg";
-import biscoffFrappe from "@/assets/biscoff-frappe.jpg";
-import spanishLatte from "@/assets/cappuccino.jpg";
-import trufflePasta from "@/assets/truffle-pasta.jpg";
-import pestoSandwich from "@/assets/pesto-sandwich.jpg";
-import strawberryShake from "@/assets/strawberry-shake.jpg";
-import chocoChipMocha from "@/assets/choco-chip-mocha.jpg";
-import cheesecakeCoffee from "@/assets/cheesecake-coffee.jpg";
+import ogCup from "@/assets/og-cup.jpeg";
+import blueberryCheesecake from "@/assets/blueberry-cheesecake.jpeg";
+import classicVegToast from "@/assets/classic-veg-toast.jpeg";
+import croissantAvocadoSandwich from "@/assets/croissant-avocado-sandwich.jpeg";
+import frappe from "@/assets/frappe.jpeg";
+import pestoBasilPasta from "@/assets/pesto-basil-pasta.jpeg";
+import painAuChocolat from "@/assets/pain-au-chocolat.jpeg";
+import hotLatte from "@/assets/hot-latte.jpeg";
+import mixSaucePasta from "@/assets/mix-sauce-pasta.jpeg";
 import logoImg from "@/assets/logo.png";
 import interiorImg from "@/assets/cafe-interior.jpg";
-import burgerImg from "@/assets/afgani-paneer-burger.jpg";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -19,6 +19,7 @@ const MAPS_URL = "https://share.google/CrYg6VvSMjuj30BJH";
 const INSTAGRAM_URL = "https://www.instagram.com/coffeeheaven__/";
 const PHONE = "+91 96719 96606";
 const PHONE_HREF = "tel:+919671996606";
+const CALL_NOW_HREF = "tel:+919729212622";
 
 export const Route = createFileRoute("/")({
   component: CoffeeHeaven,
@@ -72,60 +73,47 @@ export const Route = createFileRoute("/")({
 
 const featured = [
   {
-    name: "Biscoff Frappe",
-    price: "₹160 / ₹220",
-    description: "Blended cold coffee with spiced cookie butter and cream.",
-    image: biscoffFrappe,
-    alt: "Biscoff frappe topped with whipped cream, caramel drizzle and cookie crumbs",
+    name: "Blueberry Cheesecake",
+    image: blueberryCheesecake,
+    alt: "Slice of blueberry cheesecake served at Coffee Heaven",
   },
   {
-    name: "Spanish Latte",
-    price: "₹120 / ₹160 / ₹200",
-    description: "Espresso, sweetened milk and ice — smooth and mellow.",
-    image: spanishLatte,
-    alt: "Latte with delicate latte art in a ceramic cup",
+    name: "Classic Veg Toast",
+    image: classicVegToast,
+    alt: "Classic vegetable toast topped with cucumber, tomato and paneer",
   },
   {
-    name: "Choco Chip Mocha",
-    price: "₹160 / ₹220",
-    description: "Mocha cold coffee loaded with chocolate chips and cream.",
-    image: chocoChipMocha,
-    alt: "Choco chip mocha cold coffee topped with whipped cream and chocolate chips",
+    name: "Croissant Avocado Sandwich",
+    image: croissantAvocadoSandwich,
+    alt: "Avocado sandwich served in a flaky croissant",
   },
   {
-    name: "Cheesecake Coffee",
-    price: "₹140 / ₹180",
-    description: "Creamy cheesecake blended with cold coffee and biscuit crumble.",
-    image: cheesecakeCoffee,
-    alt: "Cheesecake cold coffee with whipped cream and biscuit crumble",
+    name: "Frappe",
+    price: "₹120 / ₹150",
+    image: frappe,
+    alt: "Two chilled Coffee Heaven frappes in takeaway cups",
   },
   {
-    name: "Truffle Pasta",
+    name: "Pesto Basil Pasta",
+    image: pestoBasilPasta,
+    alt: "Creamy pesto basil penne pasta with cherry tomatoes and toast",
+  },
+  {
+    name: "Pain au Chocolat",
+    image: painAuChocolat,
+    alt: "Pain au chocolat served with two cold drinks at Coffee Heaven",
+  },
+  {
+    name: "Hot Latte",
+    price: "₹90 / ₹140",
+    image: hotLatte,
+    alt: "Hot latte with leaf-shaped latte art",
+  },
+  {
+    name: "Mix Sauce Pasta",
     price: "₹150",
-    description: "Creamy truffle sauce, cooked fresh to order.",
-    image: trufflePasta,
-    alt: "Bowl of creamy truffle pasta with black truffle shavings",
-  },
-  {
-    name: "Pesto Paneer Sandwich",
-    price: "₹200",
-    description: "Char-grilled paneer and fresh pesto on toasted artisan bread.",
-    image: pestoSandwich,
-    alt: "Grilled pesto paneer sandwich cut in half on a wooden board",
-  },
-  {
-    name: "Strawberry Shake",
-    price: "₹130 / ₹160",
-    description: "Thick, cold and blended — add popping boba for ₹50.",
-    image: strawberryShake,
-    alt: "Strawberry milkshake in a tall glass with whipped cream and fresh strawberries",
-  },
-  {
-    name: "Loaded Afgani Paneer Burger",
-    price: "₹130",
-    description: "Creamy afgani paneer stacked in a toasted bun.",
-    image: burgerImg,
-    alt: "Loaded Afgani paneer burger with melted cheese, lettuce and creamy afgani sauce in a sesame bun",
+    image: mixSaucePasta,
+    alt: "Mix sauce penne pasta with vegetables and toasted bread",
   },
 ];
 
@@ -179,7 +167,7 @@ function CoffeeHeaven() {
             ))}
           </div>
           <a
-            href={PHONE_HREF}
+            href={CALL_NOW_HREF}
             className="justify-self-end rounded-full border border-espresso/20 px-4 py-2 text-xs font-medium transition-colors hover:bg-espresso/5 sm:px-5 sm:text-sm"
           >
             Call Now
@@ -210,10 +198,19 @@ function CoffeeHeaven() {
             <span className="mb-4 inline-block text-xs font-medium uppercase tracking-wider text-clay">
               Cafe in Rewari · Model Town
             </span>
-            <h1 className="mb-6 font-serif text-6xl leading-[0.9] font-light md:text-8xl">
-              Coffee <br />
-              <span className="italic">Heaven</span>
-            </h1>
+            <div className="mb-6 flex items-center gap-4 sm:gap-6">
+              <img
+                src={logoImg}
+                alt="Coffee Heaven emblem"
+                width={320}
+                height={320}
+                className="h-24 w-24 shrink-0 object-contain sm:h-28 sm:w-28 md:h-36 md:w-36"
+              />
+              <h1 className="font-serif text-5xl leading-[0.9] font-light sm:text-6xl md:text-7xl">
+                Coffee <br />
+                <span className="italic">Heaven</span>
+              </h1>
+            </div>
             <p className="mb-4 max-w-md font-serif text-xl italic text-espresso/80">
               Your cozy corner for coffee, conversations &amp; good food.
             </p>
@@ -298,17 +295,16 @@ function CoffeeHeaven() {
                     loading="lazy"
                     className="mb-3 aspect-square w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.02] sm:mb-5"
                   />
-                  <div className="flex items-baseline justify-between gap-2 sm:gap-3">
-                    <h3 className="truncate font-serif text-base sm:text-lg lg:text-xl">
+                  <div className="flex items-start justify-between gap-2 sm:gap-3">
+                    <h3 className="font-serif text-base leading-tight sm:text-lg lg:text-xl">
                       {item.name}
                     </h3>
-                    <p className="shrink-0 text-xs text-latte tabular-nums sm:text-sm">
-                      {item.price}
-                    </p>
+                    {item.price && (
+                      <p className="shrink-0 text-xs text-latte tabular-nums sm:text-sm">
+                        {item.price}
+                      </p>
+                    )}
                   </div>
-                  <p className="mt-1 text-xs leading-relaxed text-cream/60 sm:mt-2 sm:text-sm">
-                    {item.description}
-                  </p>
                 </div>
               </Reveal>
             ))}
@@ -488,7 +484,7 @@ function CoffeeHeaven() {
                   Get Directions
                 </a>
                 <a
-                  href={PHONE_HREF}
+                  href={CALL_NOW_HREF}
                   className="inline-flex w-fit items-center rounded-full border border-espresso/20 px-7 py-3.5 font-medium transition-colors hover:bg-espresso/5"
                 >
                   Call Now
