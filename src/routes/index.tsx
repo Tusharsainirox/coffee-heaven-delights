@@ -206,7 +206,7 @@ function CoffeeHeaven() {
                 alt="Coffee Heaven emblem"
                 width={320}
                 height={320}
-                className="h-24 w-24 shrink-0 object-contain sm:h-28 sm:w-28 md:h-36 md:w-36"
+                className="mr-6 h-24 w-24 shrink-0 object-contain sm:h-28 sm:w-28 md:mr-0 md:h-36 md:w-36 lg:mr-16"
               />
             </div>
             <p className="mb-4 max-w-md font-serif text-xl italic text-espresso/80">
