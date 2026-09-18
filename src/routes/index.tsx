@@ -93,7 +93,6 @@ const featured = [
   },
   {
     name: "Frappe",
-    price: "₹120 / ₹150",
     image: frappe,
     alt: "Two chilled Coffee Heaven frappes in takeaway cups",
   },
@@ -111,13 +110,11 @@ const featured = [
   },
   {
     name: "Hot Latte",
-    price: "₹90 / ₹140",
     image: hotLatte,
     alt: "Hot latte with leaf-shaped latte art",
   },
   {
     name: "Mix Sauce Pasta",
-    price: "₹150",
     image: mixSaucePasta,
     alt: "Mix sauce penne pasta with vegetables and toasted bread",
   },
