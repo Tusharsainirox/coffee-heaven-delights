@@ -75,19 +75,16 @@ export const Route = createFileRoute("/")({
 const featured = [
   {
     name: "Blueberry Cheesecake",
-    price: undefined,
     image: blueberryCheesecake,
     alt: "Slice of blueberry cheesecake served at Coffee Heaven",
   },
   {
     name: "Classic Veg Toast",
-    price: undefined,
     image: classicVegToast,
     alt: "Classic vegetable toast topped with cucumber, tomato and paneer",
   },
   {
     name: "Croissant Avocado Sandwich",
-    price: undefined,
     image: croissantAvocadoSandwich,
     alt: "Avocado sandwich served in a flaky croissant",
   },
@@ -98,13 +95,11 @@ const featured = [
   },
   {
     name: "Pesto Basil Pasta",
-    price: undefined,
     image: pestoBasilPasta,
     alt: "Creamy pesto basil penne pasta with cherry tomatoes and toast",
   },
   {
     name: "Pain au Chocolat",
-    price: undefined,
     image: painAuChocolat,
     alt: "Pain au chocolat served with two cold drinks at Coffee Heaven",
   },
